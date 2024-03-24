@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Repartidores Grupo JIMA</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="correo">Correo</string>
+    <string name="contrasena">Contraseña</string>
+</resources>
