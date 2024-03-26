@@ -12,4 +12,5 @@
     <color name="text_color_hint_login">#888888</color>
     <color name="button_sign_in">#79CF77</color>
     <color name="button_sign_up">#EEE975</color>
+    <color name="google_blue">#4285f4</color>
 </resources>
