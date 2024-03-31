@@ -6,4 +6,6 @@
     <string name="correo">Correo</string>
     <string name="contrasena">Contraseña</string>
     <string name="default_web_client_id">84859339844-j2ehbei48gc1msquu8fkplvckv72u13m.apps.googleusercontent.com</string>
+    <string name="name">Nombre</string>
+    <string name="telephone_number">Teléfono</string>
 </resources>
