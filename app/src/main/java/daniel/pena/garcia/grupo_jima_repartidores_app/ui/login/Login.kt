@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import daniel.pena.garcia.grupo_jima_repartidores_app.MainActivity
 import daniel.pena.garcia.grupo_jima_repartidores_app.R
 import daniel.pena.garcia.grupo_jima_repartidores_app.ui.signUp.SignUp
 
@@ -59,6 +60,8 @@ class Login : AppCompatActivity() {
                             auth.currentUser?.uid.toString(),
                             Toast.LENGTH_SHORT,
                         ).show()
+                        var intent = Intent(this, MainActivity::class.java);
+                        startActivity(intent);
                     } else {
                         // If sign in fails, display a message to the user.
                         Log.w("Error", "signInWithEmail:failure", task.exception)
