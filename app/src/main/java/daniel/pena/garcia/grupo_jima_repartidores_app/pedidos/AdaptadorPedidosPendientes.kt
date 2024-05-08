@@ -62,7 +62,7 @@ class AdaptadorPedidosPendientes(var pedidos_pendientes_list: List<PedidoPendien
     }
 
     fun entregarPedido(id: String) {
-        val url = "http://10.174.0.72:3000/"
+        val url = "http://192.168.100.12:3000/"
         val retrofit: Retrofit = Retrofit.Builder()
             .baseUrl(url)
             .addConverterFactory(GsonConverterFactory.create())

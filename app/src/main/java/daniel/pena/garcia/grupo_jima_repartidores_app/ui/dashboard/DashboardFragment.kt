@@ -73,12 +73,15 @@ class DashboardFragment : Fragment() {
         @GET("pedido/repartidor/2/listo")
         fun getPedidos(): Call<List<Pedido>>
 
+        @GET("pedido/repartidor/2/entregado")
+        fun getPedidosFinalizados(): Call<List<Pedido>>
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val url = "http://10.174.0.72:3000/"
+        val url = "http://192.168.100.12:3000/"
 
         val retrofit: Retrofit = Retrofit.Builder()
             .baseUrl(url)
