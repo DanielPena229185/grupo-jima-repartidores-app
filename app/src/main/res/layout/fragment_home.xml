@@ -51,18 +51,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Codigo de Empleado:"
+        android:text="Codigo de Empleado: A9XASB"
         android:textSize="14sp"/>
-
-    <TextView
-        android:id="@+id/tv_telefono"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Telefono:"
-        android:textSize="14sp" />
-
-
 
 
 </LinearLayout>

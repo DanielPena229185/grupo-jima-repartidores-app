@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import daniel.pena.garcia.grupo_jima_repartidores_app.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -26,6 +28,9 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        binding.tvNombre.text = Firebase.auth.currentUser?.email
+
 
         return root
     }

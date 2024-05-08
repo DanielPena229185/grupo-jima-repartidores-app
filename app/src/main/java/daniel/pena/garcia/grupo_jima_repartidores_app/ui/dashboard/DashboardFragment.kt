@@ -57,13 +57,21 @@ class DashboardFragment : Fragment() {
         val codigoRastreo: String,
         val detalles: String,
         val estado: String,
-        val total: Number
+        val total: Number,
+        var numeroRecorrido: String,
+        var tortilleria: Tortilleria
+    )
+
+    data class Tortilleria(
+        val telefono: String,
+        val nombre: String,
+        val direccion: String
     )
 
     // Retrofit service interface
     interface PedidoService {
         @GET("pedido/repartidor/2/listo")
-        fun getCatFacts(): Call<List<Pedido>>
+        fun getPedidos(): Call<List<Pedido>>
 
     }
 
@@ -80,7 +88,7 @@ class DashboardFragment : Fragment() {
         val service: PedidoService = retrofit.create(PedidoService::class.java)
 
         GlobalScope.launch(Dispatchers.IO) {
-            val call: Call<List<Pedido>> = service.getCatFacts()
+            val call: Call<List<Pedido>> = service.getPedidos()
             val response = call.execute()
 
             if (response.isSuccessful) {
@@ -96,8 +104,8 @@ class DashboardFragment : Fragment() {
                                 estado = pedido.estado,
                                 detalles = pedido.detalles,
                                 imagen = R.drawable.tortillas,
-                                gramaje = "500gr",
-                                nombreTienda = "MOmir",
+                                gramaje = pedido.numeroRecorrido,
+                                nombreTienda = pedido.tortilleria.nombre,
                                 cantidadPaquetes = 5,
                             )
                         )
