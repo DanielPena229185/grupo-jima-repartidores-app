@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Repartidores Grupo JIMA</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Perfil</string>
+    <string name="title_dashboard">Pedidos</string>
+    <string name="title_notifications">Dashboard</string>
     <string name="correo">Correo</string>
     <string name="contrasena">Contraseña</string>
     <string name="default_web_client_id">84859339844-j2ehbei48gc1msquu8fkplvckv72u13m.apps.googleusercontent.com</string>
